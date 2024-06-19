@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed = 5f;
+    public float moveSpeed = 5f;
 
     // Update is called once per frame
     void Update()
@@ -13,6 +13,6 @@ public class PlayerMovement : MonoBehaviour
 
         Vector3 movement = new Vector3(moveHorizontal, 0f, 0f);
 
-        transform.Translate(movement * speed * Time.deltaTime, Space.World);
+        transform.Translate(movement * moveSpeed * Time.deltaTime, Space.World);
     }
 }
