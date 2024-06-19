@@ -38,4 +38,9 @@ public class MoveForward : MonoBehaviour
     {
         transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        Destroy(gameObject);
+    }
 }
